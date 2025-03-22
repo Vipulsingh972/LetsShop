@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.img-section{
+    
+    /* display: flex;
+    overflow: hidden; */
+    
+}
+.img-background img{
+    width: 100%;
+
+}

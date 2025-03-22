@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-category {
+    width: 600px;
+}
+.c-link{
+    padding: 20px 90px;
+}
+.btn-category{
+    width: 400px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card {
+    width: 260px;
+    padding: 20px -1px;
+}
+.card-img-top {
+    width: 270px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+}
