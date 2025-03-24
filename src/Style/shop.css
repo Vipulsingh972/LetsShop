@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body, html {
+        overflow-x: hidden;
+}
+
 .category-container {
   display: flex;
   justify-content: space-between;
