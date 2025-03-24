@@ -27,7 +27,7 @@ const products = [
     title: "Product 1",
     description: "Product description.",
     image: logo,
-    link: "#",
+    link: "/product-details",
   },
   {
     id: 2,
