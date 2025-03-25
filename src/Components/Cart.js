@@ -77,22 +77,22 @@ const Cart = () => {
             </tr>
           </tbody>
         </table>
-        <div className="cart-buttons">
+        {/* <div className="cart-buttons">
           <input type="text" placeholder="Coupon Code" />
           <button>Apply Coupon</button>
           <button>Update Cart</button>
-        </div>
+        </div> */}
       </div>
       <div className="cart-totals">
-        <h3>Cart Totals</h3>
-        <p>
+        <h3>Cart Totals</h3>  <span>$79.65</span>
+        {/* <p>
           Subtotal: <span>$79.65</span>
         </p>
         <hr />
         <p>
           Total: <span>$79.65</span>
-        </p>
-        <button className="checkout-btn">Proceed to Checkout</button>
+        </p> */}
+        <button className="checkout-btn">BUY</button>
       </div>
     </div>
   );
