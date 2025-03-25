@@ -4,18 +4,17 @@
   box-sizing: border-box;
 }
 
-
 .about-background {
-    display: flex;
-  background-image: url('/src/Assets/LetsShop_Images/images/bg-01.jpg');
+  display: flex;
+  background-image: url("/src/Assets/LetsShop_Images/images/bg-01.jpg");
   width: 1536px;
-   height: 240px; 
-   justify-content: center;
-   align-items: center;
+  height: 240px;
+  justify-content: center;
+  align-items: center;
 }
 .about-background h1 {
-    color: white;
-    font-size: 50px;
+  color: white;
+  font-size: 50px;
 }
 
 .our-section {
