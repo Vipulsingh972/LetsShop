@@ -27,7 +27,9 @@ const Navbarr = () => {
             </div>
             <div className="nav-functions">
               <div className="nav-search function">Search</div>
-              <div className="nav-cart function">Cart</div>
+              <div className="nav-cart function">
+              <Link to="/cart">Cart</Link>
+              </div>
 
               <div className="nav-login function">
                 <Link to="/login">LogIn</Link>

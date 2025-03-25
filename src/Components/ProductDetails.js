@@ -43,7 +43,10 @@ const ProductPage = () => {
           <span>{quantity}</span>
           <div className="q-c-div" onClick={handleIncrease}>+</div>
         </div>
+        <div className="add-buy">
         <button className="add-to-cart">ADD TO CART</button>
+        <button className="buy-now">BUY NOW</button>
+        </div>
         <div className="social-icons">
           <span>❤️</span>
           <span>🔗</span>

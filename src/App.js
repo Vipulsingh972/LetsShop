@@ -13,6 +13,7 @@ import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import SignUp from "./Components/Signup";
 import ProductDetails from "./Components/ProductDetails";
+import Cart from "./Components/Cart";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/product-details" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </>
     </Router>
