@@ -27,7 +27,11 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+<<<<<<< HEAD
           <Route path="/product-details" element={<ProductDetails />} />
+=======
+          <Route path="/product-details/:id" element={<ProductDetails />} />
+>>>>>>> 389a2763fcf03e9bb66945340574bbc5c7ef35f2
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </>
@@ -36,3 +40,6 @@ const App = () => {
 };
 
 export default App;
+
+
+
