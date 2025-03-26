@@ -3,6 +3,7 @@ import "../Style/signup.css";
 import { Link } from "react-router-dom";
 import ApiService from "../service/ApiService";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const SignUp = () => {
   const [userdata, setUserData] = useState({
@@ -41,6 +42,7 @@ const SignUp = () => {
   };
 
   return (
+    <>
     <div className="signup-container">
       <div className="signup-box">
         <h2>
@@ -114,6 +116,10 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+
+      <Footer/>
+
+    </>
   );
 };
 

@@ -62,11 +62,10 @@
 
 
 
-
-
 import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import "../Style/productdetails.css";
+import Footer from "./Footer";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -83,6 +82,7 @@ const ProductDetails = () => {
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
   return (
+    <>
     <div className="product-container">
       <div className="product-box">
         {/* Image Section */}
@@ -107,10 +107,14 @@ const ProductDetails = () => {
           <label>Size</label>
           <select>
             <option>Choose an option</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
           </select>
           <label>Color</label>
           <select>
             <option>Choose an option</option>
+            <option>Not Available</option>
           </select>
 
           {/* Quantity Selector */}
@@ -128,42 +132,16 @@ const ProductDetails = () => {
 
           {/* Social Icons */}
           <div className="social-icons">
-            <span>❤️</span>
+            <span>❤</span>
             <span>🔗</span>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="details-section">
-        <h2>Lightweight Jacket</h2>
-        <p className="price">$58.79</p>
-        <p className="description">Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.</p>
-        <label>Size</label>
-        <select>
-          <option>Choose an option</option>
-        </select>
-        <label>Color</label>
-        <select>
-          <option>Choose an option</option>
-        </select>
-        <div className="quantity-container">  
-          <div className="q-c-div" onClick={handleDecrease}>-</div>
-          <span>{quantity}</span>
-          <div className="q-c-div" onClick={handleIncrease}>+</div>
-        </div>
-        <div className="add-buy">
-        <button className="add-to-cart">ADD TO CART</button>
-        <button className="buy-now">BUY NOW</button>
-        </div>
-        <div className="social-icons">
-          <span>❤️</span>
-          <span>🔗</span>
-        </div>
-      </div>
-     </div>
-=======
->>>>>>> 389a2763fcf03e9bb66945340574bbc5c7ef35f2
     </div>
+
+<Footer/>
+
+    </>
   );
 };
 

@@ -2,9 +2,11 @@ import React from "react";
 import "../Style/cart.css";
 import logo from "../Assets/LetsShop_Images/images/item-cart-01.jpg";
 import "../Style/navbar.css";
+import Footer from "./Footer";
 
 const Cart = () => {
   return (
+    <>
     <div className="cart-container nav-container">
       <div className="cart-items">
         <table>
@@ -95,6 +97,8 @@ const Cart = () => {
         <button className="checkout-btn">BUY</button>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

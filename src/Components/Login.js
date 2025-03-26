@@ -35,7 +35,7 @@ const Login = () => {
           </form>
 
           <p className="signup-text">
-            Haven't any account? <Link to="/signup">SignUp?</Link>
+            Haven't any account? <Link to="/Signup">SignUp?</Link>
             {/* <a href="#">Sign Up</a> */}
           </p>
 

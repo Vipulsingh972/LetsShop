@@ -212,7 +212,7 @@ import logo15 from "../Assets/LetsShop_Images/images/product-16.jpg";
 
 const categories = ["All Products", "Women", "Men", "Bag", "Shoes", "Watches"];
 const products = [
-<<<<<<< HEAD
+
   {
     id: 1,
     title: "White T-Shirt",
@@ -325,7 +325,7 @@ const products = [
     image: logo15,
     link: "#",
   },
-=======
+
   { id: 1, title: "White T-Shirt", description: "549/-", image: logo },
   { id: 2, title: "White Shirt", description: "799/-", image: logo1 },
   { id: 3, title: "Raymand shirt", description: "999/-", image: logo2 },
@@ -342,7 +342,7 @@ const products = [
   { id: 14, title: "Black Top", description: "949/-", image: logo13 },
   { id: 15, title: "TITAN", description: "7999/-", image: logo14 },
   { id: 16, title: "Sleep Wear Combo", description: "2099/-", image: logo15 },
->>>>>>> 389a2763fcf03e9bb66945340574bbc5c7ef35f2
+
 ];
 
 const Shop = () => {
