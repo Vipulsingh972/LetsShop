@@ -10,6 +10,8 @@ import Login from "./Components/Login";
 import SignUp from "./Components/Signup";
 import ProductDetails from "./Components/ProductDetails";
 import Cart from "./Components/Cart";
+import CounterUseState from "./hooks/useState/CounterUseState";
+import CounterUseReducer from "./hooks/useState/CounterUseReducer";
 
 const App = () => {
   return (
@@ -26,11 +28,13 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/cart"  element={<Cart />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/usestate" element={<CounterUseState />} />
+            <Route path="/count" element={<CounterUseReducer />} />
           </Routes>
         </>
       </Router>
       </CartProvider>
-// >>>>>>> f0b5cda ( signup done)
+
   );
 };
 

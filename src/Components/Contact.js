@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../Assets/LetsShop_Images/images/bg-01.jpg";
 import Footer from "./Footer";
+import "../Style/contact.css";
 
 const Contact = () => {
   return (
@@ -23,7 +24,7 @@ const Contact = () => {
             <input type="email" placeholder="Your Email Address" />
           </div>
           <textarea placeholder="How Can We Help?"></textarea>
-          <button type="submit">SUBMIT</button>
+          <button type="submit" className="submit">SUBMIT</button>
         </div>
 
         <div className="info-section">
