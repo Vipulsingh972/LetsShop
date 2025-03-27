@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../Assets/letsshop.png";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const Navbarr = () => {
+  const { cart } = useContext(CartContext);
+  // Calculate total cart quantity
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <>
       <header>
@@ -28,7 +33,7 @@ const Navbarr = () => {
             <div className="nav-functions">
               <div className="nav-search function">Search</div>
               <div className="nav-cart function">
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart" id="cart">🛒{cartCount > 0 && <span className="cart-count">{cartCount}</span>}</Link>
               </div>
 
               <div className="nav-login function">

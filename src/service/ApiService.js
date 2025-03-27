@@ -16,22 +16,10 @@ const signup = async (userdata) => {
 const login = async (userdata) => {
   try {
     const response = await axios.post(`${API_URL}/api/users/login`, userdata);
-    console.log("our response", response);
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : { message: "An error occurred!" };
   }
 };
 
-const contact = async (userdata) => {
-  try {
-    const response = await axios.post(`${API_URL}/api/contact/submit`, userdata);
-    console.log("our response", response);
-    return response.data;
-  } catch (error) {
-    throw error.response ? error.response.data : { message: "An error occurred!" };
-  }
-};
-
-
-export default { signup, login, contact };
+export default { signup, login };

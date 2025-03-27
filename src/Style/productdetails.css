@@ -9,9 +9,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100vh;
   }
 
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+  }
+  .close-btn:hover {
+    color: darkred;
+  }
+  
   .product-box{
     background: #fff;
     padding: 30px 30px 30px 30px;

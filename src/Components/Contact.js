@@ -1,36 +1,8 @@
 import React from "react";
-// import logo from "../Assets/LetsShop_Images/images/bg-01.jpg";
+import logo from "../Assets/LetsShop_Images/images/bg-01.jpg";
 import Footer from "./Footer";
-import ApiService from "../service/ApiService";
-import { useState } from "react";
 
 const Contact = () => {
-  const [userdata, setUserData] = useState({
-    email: "",
-    message: "",
-  });
-
-  const [error, setError] = useState(null);
-
-  const handleChange = (e) => {
-    setUserData({ ...userdata, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (userdata.password !== userdata.confirmPassword) {
-      setError("Passwords do not match!");
-      return;
-    }
-    try {
-      await ApiService.contact(userdata); // Use signup method instead 
-    } catch (error) {
-      setError(
-        error.message || "An error occurred during Sending Information."
-      ); // Show error message
-    }
-  };
-
   return (
     <>
       <div className="c-container">
@@ -44,30 +16,15 @@ const Contact = () => {
       </div>
 
       <div className="contact-container">
-        <form onSubmit={handleSubmit}>
-          <div className="form-section">
-            <h2>Send Us A Message</h2>
-            <div className="input-box">
-              <span className="icon">📧</span>
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                name="email"
-                value={userdata.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <textarea
-              placeholder="How Can We Help?"
-              name="message"
-              value={userdata.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit">SUBMIT</button>
+        <div className="form-section">
+          <h2>Send Us A Message</h2>
+          <div className="input-box">
+            <span className="icon">📧</span>
+            <input type="email" placeholder="Your Email Address" />
           </div>
-        </form>
+          <textarea placeholder="How Can We Help?"></textarea>
+          <button type="submit">SUBMIT</button>
+        </div>
 
         <div className="info-section">
           <div className="info-box">
