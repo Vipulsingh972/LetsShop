@@ -42,12 +42,12 @@ const App = () => {
               <Route path="/count" element={<CounterUseReducer />} />
               <Route path="/post" element={<UseEffect />} />
               <Route path="/theme" element={<ThemeComponent />} />
-              <Route path="/whatsapp" element={<WhatsApp />} />
+              {/* <Route path="/whatsapp" element={<WhatsApp />} />
               <Route path="/message" element={<Message />} />
               <Route path="/c" element={<C />} />
               <Route path="/a" element={<A />} />
               <Route path="/b" element={<B />} />
-              <Route path="/d" element={<D />} />
+              <Route path="/d" element={<D />} /> */}
             </Routes>
           </>
         </Router>
