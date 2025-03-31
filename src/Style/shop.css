@@ -1,56 +1,14 @@
-  * {
+/* Reset Styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and HTML */
 body, html {
-        overflow-x: hidden;
+  overflow-x: hidden;
 }
-
-/* .category-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 0px;
-}
-
-.link-category {
-  display: flex;
-  gap: 15px;
-}
-
-.c-links {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  padding: 10px 15px;
-  transition: 0.3s;
-}
-
-.c-links:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.btn-category {
-  display: flex;
-  gap: 15px;
-  margin-left: 495px;
-}
-
-.btn-category a {
-  text-decoration: none;
-  color: white;
-  background-color: #007bff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn-category a:hover {
-  background-color: #0056b3;
-} */
 
 /* Card Grid Layout */
 .card-container {
@@ -60,6 +18,7 @@ body, html {
   padding: 10px;
   justify-content: center;
   margin-left: 160px;
+  margin-right: 160px;
 }
 
 .card {
@@ -69,7 +28,7 @@ body, html {
   padding: 10px;
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -78,14 +37,15 @@ body, html {
 
 .card-img-top {
   width: 100%;
-  height: 320px;
+  height: auto;
+  max-height: 320px; /* Adjust max height for images */
   object-fit: cover;
   border-radius: 10px;
 }
 
 .card-title {
   font-size: 18px;
-  margin:  0px 0;
+  margin: 0px 0;
 }
 
 .card-text {
@@ -98,27 +58,30 @@ body, html {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
-  background-color:#555;
+  background-color: #555;
   color: white;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #540909;
 }
 
+/* Category Container */
 .category-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+  flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
 }
 
 .link-category {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Ensure categories wrap on smaller screens */
 }
 
 .c-link {
@@ -150,46 +113,23 @@ body, html {
 .btn-category {
   display: flex;
   gap: 15px;
-  margin-left: 495px;
+  margin-left: auto;
+  flex-wrap: wrap; /* Ensures buttons are responsive */
 }
 
 .btn-category a {
-  align-items: center;
-  gap: 5px;
   padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
   color: black;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-category a:hover {
   background: #f8f8f8;
 }
-
-/* .btn-category {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-category a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-  color: black;
-  text-decoration: none;
-}
-
-.btn-category a:hover {
-  background: #f8f8f8;
-} */
-
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -201,7 +141,6 @@ body, html {
 
   .btn-category {
     margin-left: 0;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -215,17 +154,26 @@ body, html {
 /* Mobile Devices */
 @media (max-width: 600px) {
   .card-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-img-top {
+    object-fit: contain; /* Ensures images are responsive and fit inside the box */
+    height: auto;
+    max-height: 250px; /* Controls the height of images */
   }
 
   .category-container {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .link-category {
     flex-direction: column;
     align-items: center;
+    gap: 10px; /* Added gap between links for better spacing */
   }
 
   .btn-category {

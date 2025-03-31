@@ -149,7 +149,7 @@ const Shop = () => {
     <>
       <div className="container">
         {/* Category Navigation */}
-        <div className="shop-container nav-container">
+        <div className="shop-container">
           <div className="category-container">
             <div className="link-category">
               {categories.map((category, index) => (

@@ -1,86 +1,86 @@
-
 .cart-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    height: 60vh;
-  }
-  
-  .cart-items {
-    width: 65%;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  td img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  td span {
-    margin: 0 10px;
-  }
-  
-  button {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  .cart-buttons {
-    margin-top: 20px;
-  }
-  
-  .cart-buttons input {
-    padding: 5px;
-    margin-right: 10px;
-  }
-  
-  .cart-buttons button {
-    margin-right: 10px;
-  }
-  
-  .cart-totals {
-    width: 30%;
-    padding: 20px;
-    line-height: 45px;
-    border: 1px solid #ddd;
-  }
-  
-  .cart-totals p {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .checkout-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-/* Media Query   */
-  /* For tablets and small desktops */
+/* Cart Items */
+.cart-items {
+  flex: 1;
+  min-width: 60%;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+td span {
+  margin: 0 10px;
+}
+
+/* Buttons */
+button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Cart Totals */
+.cart-totals {
+  flex: 1;
+  min-width: 30%;
+  padding: 20px;
+  line-height: 45px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-totals p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Media Queries */
+
+/* Tablets & Small Desktops */
 @media (max-width: 1024px) {
   .cart-container {
     flex-direction: column;
-    height: auto;
     align-items: center;
   }
 
@@ -94,7 +94,7 @@
   }
 }
 
-/* For tablets and large phones */
+/* Large Phones & Tablets */
 @media (max-width: 768px) {
   td img {
     width: 40px;
@@ -112,10 +112,11 @@
 
   .cart-totals {
     width: 100%;
+    padding: 15px;
   }
 }
 
-/* For mobile phones */
+/* Mobile Phones */
 @media (max-width: 480px) {
   .cart-container {
     padding: 10px;
@@ -131,12 +132,18 @@
     height: 35px;
   }
 
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
   .cart-totals {
-    padding: 15px;
+    padding: 12px;
     line-height: 35px;
   }
 
   .checkout-btn {
     font-size: 14px;
+    padding: 10px;
   }
 }
