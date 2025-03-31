@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Style/navbar.css";
 import "../Style/shop.css";
@@ -25,118 +25,126 @@ const products = [
   {
     id: 1,
     title: "White T-Shirt",
-    description: "549/- ",
+    price: "549/- ",
     image: logo,
-    link: "/product-details",
+    category: "Women",
   },
   {
     id: 2,
     title: "White Shirt",
-    description: "799/-",
+    price: "799/-",
     image: logo1,
-    link: "#",
+    category: "Women",
   },
   {
     id: 3,
     title: "Raymand shirt",
-    description: "999/-",
+    price: "999/-",
     image: logo2,
-    link: "#",
+    category: "Men",
   },
   {
     id: 4,
     title: "Winter Jacket",
-    description: "2999/-",
+    price: "2999/-",
     image: logo3,
-    link: "#",
+    category: "Women",
   },
   {
     id: 5,
     title: "Primium Combo",
-    description: "999/-",
+    price: "999/-",
     image: logo4,
-    link: "#",
+    category: "Women",
   },
   {
     id: 6,
     title: "SONATA",
-    description: "4999/-",
+    price: "4999/-",
     image: logo5,
-    link: "#",
+    category: "Watches",
   },
   {
     id: 7,
     title: "Suit",
-    description: "1199/-",
+    price: "1199/-",
     image: logo6,
-    link: "#",
+    category: "Women",
   },
   {
     id: 8,
     title: "T-Shirt",
-    description: "499/-",
+    price: "499/-",
     image: logo7,
-    link: "#",
+    category: "Women",
   },
   {
     id: 9,
     title: "Sneker's",
-    description: "2099/-",
+    price: "2099/-",
     image: logo8,
-    link: "#",
+    category: "Shoes",
   },
   {
     id: 10,
     title: "Black Top",
-    description: "699/-",
+    price: "699/-",
     image: logo9,
-    link: "#",
+    category: "Women",
   },
   {
     id: 11,
     title: "Blue primium Shirt",
-    description: "2000/-",
+    price: "2000/-",
     image: logo10,
-    link: "#",
+    category: "Men",
   },
   {
     id: 12,
-    title: "Pur Lathner Belt",
-    description: "399/-",
+    title: "Pure Lathner Belt",
+    price: "399/-",
     image: logo11,
-    link: "#",
+    category: "Men",
   },
   {
     id: 13,
     title: "Combo",
-    description: "1299/-",
+    price: "1299/-",
     image: logo12,
-    link: "#",
+    category: "Women",
   },
   {
     id: 14,
     title: "Black Top",
-    description: "949/-",
+    price: "949/-",
     image: logo13,
-    link: "#",
+    category: "Women",
   },
   {
     id: 15,
     title: "TITAN",
-    description: "7999/-",
+    price: "7999/-",
     image: logo14,
-    link: "#",
+    category: "Watches",
   },
   {
     id: 16,
     title: "Sleep Wear Combo",
-    description: "2099/-",
+    price: "2099/-",
     image: logo15,
-    link: "#",
+    category: "Women",
   },
 ];
 
 const Shop = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All Products");
+
+  // Filter products based on selected category
+  const filteredProducts =
+    selectedCategory === "All Products"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
+
   return (
     <>
       <div className="container">
@@ -145,9 +153,13 @@ const Shop = () => {
           <div className="category-container">
             <div className="link-category">
               {categories.map((category, index) => (
-                <Link key={index} className="c-links">
+                <button 
+                  key={index}
+                  className={`c-link ${selectedCategory === category ? "active" : ""}`}
+                  onClick={() => setSelectedCategory(category)}
+                >
                   {category}
-                </Link>
+                </button>
               ))}
             </div>
             <div className="btn-category">
@@ -159,33 +171,35 @@ const Shop = () => {
 
         {/* Product Cards */}
         <div className="card-container universal">
-          {products.map((product) => (
-            <div key={product.id} className="card">
-              <img
-                className="card-img-top"
-                src={product.image}
-                alt={product.title}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">{product.description}</p>
-                <a href={product.link} className="btn btn-primary">
-                  View Details
-                </a>
+          {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+              <div key={product.id} className="card">
+                <img
+                  className="card-img-top"
+                  src={product.image}
+                  alt={product.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{product.title}</h5>
+                  <p className="card-text">{product.price}</p>
+                  <Link to={`/product/${product.id}`} className="btn btn-primary">
+                    View Details
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : ( // <-- This was missing
+            <p className="no-products">No products available in this category.</p>
+          )}
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default Shop;
-
-
 
 // // Shop.js
 // import React, { useContext } from "react";
@@ -196,14 +210,14 @@ export default Shop;
 
 // const categories = ["All Products", "Women", "Men", "Bag", "Shoes", "Watches"];
 // const products = [
-//   { id: 1, title: "Product 1", description: "Product description.", image: logo, link: "#" },
-//   { id: 2, title: "Product 2", description: "Product description.", image: logo, link: "#" },
-//   { id: 3, title: "Product 3", description: "Product description.", image: logo, link: "#" },
-//   { id: 4, title: "Product 4", description: "Product description.", image: logo, link: "#" },
-//   { id: 5, title: "Product 5", description: "Product description.", image: logo, link: "#" },
-//   { id: 6, title: "Product 6", description: "Product description.", image: logo, link: "#" },
-//   { id: 7, title: "Product 7", description: "Product description.", image: logo, link: "#" },
-//   { id: 8, title: "Product 8", description: "Product description.", image: logo, link: "#" },
+//   { id: 1, title: "Product 1", price: "Product price.", image: logo, link: "#" },
+//   { id: 2, title: "Product 2", price: "Product price.", image: logo, link: "#" },
+//   { id: 3, title: "Product 3", price: "Product price.", image: logo, link: "#" },
+//   { id: 4, title: "Product 4", price: "Product price.", image: logo, link: "#" },
+//   { id: 5, title: "Product 5", price: "Product price.", image: logo, link: "#" },
+//   { id: 6, title: "Product 6", price: "Product price.", image: logo, link: "#" },
+//   { id: 7, title: "Product 7", price: "Product price.", image: logo, link: "#" },
+//   { id: 8, title: "Product 8", price: "Product price.", image: logo, link: "#" },
 // ];
 
 // const Shop = () => {
@@ -225,7 +239,7 @@ export default Shop;
 //             <img src={product.image} alt={product.title} className="product-image" />
 //             <div className="product-info">
 //               <h5>{product.title}</h5>
-//               <p>{product.description}</p>
+//               <p>{product.price}</p>
 //               <button
 //                 className="add-to-cart-btn"
 //                 onClick={() => addToCart(product)} // Add to cart on click

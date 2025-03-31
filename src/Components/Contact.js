@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../Assets/LetsShop_Images/images/bg-01.jpg";
 import Footer from "./Footer";
+import "../Style/contact.css";
 
 const Contact = () => {
   return (

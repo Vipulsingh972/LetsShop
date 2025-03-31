@@ -9,9 +9,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100vh;
   }
 
+  .close-btn {
+    position: absolute;
+    top: 180px;
+    right: 260px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+  }
+  .close-btn:hover {
+    color: darkred;
+  }
+  
   .product-box{
     background: #fff;
     padding: 30px 30px 30px 30px;
@@ -49,10 +63,10 @@
     max-width: 360px;
   }
 
-  .details-section h2, p, div, select  {
+  /* .details-section h2, p, div, select  {
     padding: 5px 0px;
 
-  }
+  } */
   /* .quantity-container-btn1 {
     margin-left: 0px;
     width: 100px;
