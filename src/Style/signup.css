@@ -118,3 +118,45 @@ body {
 .linkedin-btn {
   background: #0077b5;
 }
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .signup-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .signup-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .signup-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .social-icons button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}

@@ -75,13 +75,8 @@ const ProductPage = () => {
   const navigate = useNavigate();
 
   const [quantity, setQuantity] = useState(1);
-<<<<<<< HEAD
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
-=======
-  const [size, setSize] = useState(""); 
-  const [color, setColor] = useState(""); 
->>>>>>> fc7efa9334f20023395471b664d23e2ef7ed41d9
 
   const handleIncrease = () => setQuantity(quantity + 1);
   const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
@@ -89,10 +84,6 @@ const ProductPage = () => {
   if (!product) {
     return <h2>Product not found</h2>;
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> fc7efa9334f20023395471b664d23e2ef7ed41d9
 
   const handleAddToCart = () => {
     if (!size) {
@@ -119,17 +110,10 @@ const ProductPage = () => {
   return (
     <>
       <div className="product-container">
-<<<<<<< HEAD
-        <div className="product-box">
-          <button className="close-btn" onClick={() => navigate("/shop")}>
-            ❌
-          </button>
-=======
       <button className="close-btn" onClick={() => navigate("/shop")}>
         ❌
       </button>
         <div className="product-box">
->>>>>>> fc7efa9334f20023395471b664d23e2ef7ed41d9
           <div className="image-section">
             <div className="main-image">
               <img src={product.image} alt="Product" />
@@ -154,13 +138,7 @@ const ProductPage = () => {
             </select>
             <label>Color</label>
             <select value={color} onChange={(e) => setColor(e.target.value)}>
-<<<<<<< HEAD
-              <option value="" disabled>
-                Choose a color
-              </option>
-=======
               <option value="" disabled>Choose a color</option>
->>>>>>> fc7efa9334f20023395471b664d23e2ef7ed41d9
               <option value="Red">Red</option>
               <option value="Blue">Blue</option>
               <option value="White">White</option>

@@ -90,3 +90,65 @@ button.next { right: 10px; }
     margin-top: 20px;
     padding-left: 175px;
 }
+
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .slider {
+    height: 70vh;
+  }
+
+  .slide img {
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  .product-overview {
+    font-size: 16px;
+    padding-left: 50px;
+  }
+}
+
+/* For tablets and large phones */
+@media (max-width: 768px) {
+  .slider {
+    height: 60vh;
+  }
+
+  .slide img {
+    height: 60vh;
+  }
+
+  button.prev, button.next {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .product-overview {
+    font-size: 14px;
+    padding-left: 30px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .slider {
+    height: 50vh;
+  }
+
+  .slide img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  button.prev, button.next {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .product-overview {
+    font-size: 12px;
+    padding-left: 15px;
+    text-align: center;
+  }
+}
