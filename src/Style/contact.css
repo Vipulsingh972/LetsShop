@@ -73,7 +73,7 @@ textarea {
   resize: none;
 }
 
-button {
+.submit {
   width: 100%;
   padding: 12px;
   background: linear-gradient(to right, #d5a319, #000000);

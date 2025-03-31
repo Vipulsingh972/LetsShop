@@ -24,7 +24,7 @@ const Contact = () => {
             <input type="email" placeholder="Your Email Address" />
           </div>
           <textarea placeholder="How Can We Help?"></textarea>
-          <button type="submit">SUBMIT</button>
+          <button type="submit" className="submit">SUBMIT</button>
         </div>
 
         <div className="info-section">
